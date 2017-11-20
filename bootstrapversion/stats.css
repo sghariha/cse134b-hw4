@@ -1,0 +1,62 @@
+ul {
+  margin-top: 2em;
+  margin-bottom: 2em !important;
+  border-radius: 34px; 
+    -moz-border-radius: 34px; 
+    -webkit-border-radius: 34px;
+  border: 2px solid #FFC80A;
+}
+
+li {
+  width: 30vw
+}
+
+.nav li a {
+  color: #9FA3A7
+}
+
+.nav li .active, .nav li .active:focus, .nav li .active:hover {
+  color: #000 !important;
+  background-color:#FFC80A !important;
+    border-radius:1.2em;
+}
+
+h2 {
+  margin: 90px 0;
+}
+
+.dropdown {
+  margin: 50px 0 !important;
+}
+
+.h-active {
+  color: #FFC80A;
+}
+
+.h-nonactive {
+  color: rgba(0,0,0, .1);
+}
+
+.col-11 {
+  background-color: red;
+  word-wrap: break-word;
+}
+
+.btn, button {
+  border-radius: 1.2em !important;
+  background-color: #FFC80A !important;
+  border: 0 !important;
+}
+
+hr {
+  background-color: #FFC80A !important;
+}
+
+.row {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+img {
+  height: 2em;
+}

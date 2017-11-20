@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Edit Event</title>
+	<link rel="stylesheet" href="createevent.css" >
+</head>
+<body>
+	<nav class="nav-top nav-head">
+      <ul>
+        <li>
+          <a href="stats-coach.html" class="a-stats">STATS</a>
+        </li>
+        <li>
+          <a href="scheduleadmin.html" class="a-schedule active">SCHEDULE</a>
+        </li>
+        <li>
+          <a href="rosteradmin.html" class ="a-schedule">ROSTER</a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="nav-sub nav-head">
+      <ul>
+        <li>
+          <a href="creategame.html" class="a-stats">GAME</a>
+        </li>
+        <li>
+          <a href="createpractice.html" class="a-schedule">PRACTICE</a>
+        </li>
+        <li>
+          <a href="createother.html" class ="a-schedule active">OTHER</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="event-content">
+    	<form action="/action_page.php">
+		    <div class="container">
+			    <div align="center">
+			        <h3 class="formlabel"><label>Title</label></h3>
+			        <input type="text" name="Title">
+			       
+			        <h3 class="formlabel"><label>Date</label></h3>
+			        <input type="date" name="Date">
+
+			        <h3 class="formlabel"><label>Start Time</label></h3>
+			        <input type="time" name="Start Time">
+
+			        <h3 class="formlabel"><label>End Time</label></h3>
+			        <input type="time" name="End Time">
+
+			        <h3 class="formlabel"><label>Location</label></h3>
+			        <input type="text" name="Location">
+			    </div>
+
+			    <div>
+			        <p align="center">
+			        	<input id="loginbtn" type="button" value="CREATE" onclick="return btntest_onclick()"/>
+        					<script language="javascript" type="text/javascript">
+        						function btntest_onclick() {       
+            						window.location.href = "scheduleadmin.html";
+        						}
+        					</script>
+			          	<h3 align="center"><a href="scheduleadmin.html">exit</a></h3>
+			        </p>
+			    </div>
+		    </div>
+		</form>
+	</section>
+</body>
+</html>

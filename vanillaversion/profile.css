@@ -1,0 +1,211 @@
+#loginbtn {
+    width: 20em;
+    height: 3em;
+    border-radius: 34px; 
+    -moz-border-radius: 34px; 
+    -webkit-border-radius: 34px;
+    border: 2px solid #FFC80A;
+    background-color: #FFC80A;
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+    padding: 2px 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,700");
+
+body{
+  width:100% !important;
+  background-color:white;
+  overflow-x:hidden
+}
+
+.nav-head{
+  border:1px solid #FFC80A;
+  border-radius:1.2em;
+  width:75%;
+  margin:30px auto
+}
+
+.nav-head ul{
+  margin:0;
+  padding:0;
+  display:table;
+  width:100%
+}
+
+.nav-head ul li {
+  display:table-cell
+}
+
+.nav-head ul li a{
+  padding:.7em 0 .7em 0;
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  color:#9FA3A7;
+  font-size:.7em;
+  font-family:"Montserrat",sans-serif;
+  font-weight:700
+}
+
+.nav-head ul li .active{
+  background-color:#FFC80A;
+  border-radius:1.2em;
+  color:#000
+}
+
+hr {
+  margin: 20px 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #FFC80A;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.schedule-content {
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 150px;
+}
+
+.filterlabel {
+  display: inline;
+  color: #B5B8BB
+}
+
+.filterheader {
+  display: inline;
+  color:#FFC80A;
+  margin-right: 2em
+}
+
+.filter {
+  margin-top: 3em;
+  margin-bottom: 3em
+}
+
+.event {
+  font-family: $main-font;
+  display: table;
+  width: 100%;
+}
+.left {
+  padding: 0 1em 0 0;
+  text-align: left;
+  display: table-cell;
+  width: 10%;
+}
+.right {
+  display: table-cell;
+}
+
+.schedulerow {
+  margin-right: 1em;
+  display: inline;
+}
+
+.schedulebottomrow {
+  margin-top: 1em
+}
+
+#modschedule {
+  width: 10em;
+  height: 2em;
+  border-radius: 34px; 
+  -moz-border-radius: 34px; 
+  -webkit-border-radius: 34px;
+  border: 2px solid #FFC80A;
+  background-color: #FFC80A;
+  font-size: .7em;
+  text-transform: uppercase;
+}
+
+.management {
+  float: right
+}
+
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,700");
+
+.stats-more-content{
+  width:75%;
+  margin:70px auto;
+  margin-bottom:150px
+}
+
+.stats-more-content .stats-main{
+  margin-top:30px;
+  padding-bottom:1em
+}
+
+.stats-more-content .stats-main table{
+  font-family:"Montserrat",sans-serif
+}
+
+.stats-more-content .stats-main table tr:nth-of-type(2) td:nth-of-type(1){
+  background-color:black;
+  color:white
+}
+
+.stats-more-content .stats-main table tr:nth-of-type(3) td:nth-of-type(1){
+  background-color:#9FA3A7;
+  color:white
+}
+
+.stats-more-content .stats-main table td{
+  text-align:center;
+  align:left;
+  padding:0 1em 0 1em
+}
+
+.stats-more-content .stats-shots,.stats-more-content .stats-pass,.stats-more-content .stats-saves,.stats-more-content .stats-fouls{
+  margin-top:50px
+}
+
+.stats-more-content .stats-shots h3,.stats-more-content .stats-pass h3,.stats-more-content .stats-saves h3,.stats-more-content .stats-fouls h3{
+  margin-bottom:0
+}
+
+.stats-more-content .stats-shots table,.stats-more-content .stats-pass table,.stats-more-content .stats-saves table,.stats-more-content .stats-fouls table{
+  font-family:"Montserrat",sans-serif
+}
+
+.stats-more-content .stats-shots table tr:nth-of-type(odd) td:nth-of-type(1),.stats-more-content .stats-pass table tr:nth-of-type(odd) td:nth-of-type(1),.stats-more-content .stats-saves table tr:nth-of-type(odd) td:nth-of-type(1),.stats-more-content .stats-fouls table tr:nth-of-type(odd) td:nth-of-type(1){
+  background-color:#FFC80A;
+  color:black;
+  text-align:center
+}
+
+.stats-more-content .stats-shots table tr:nth-of-type(even) td:nth-of-type(1),.stats-more-content .stats-pass table tr:nth-of-type(even) td:nth-of-type(1),.stats-more-content .stats-saves table tr:nth-of-type(even) td:nth-of-type(1),.stats-more-content .stats-fouls table tr:nth-of-type(even) td:nth-of-type(1){
+  background-color:white;
+  color:black;
+  text-align:center
+}
+
+.stats-more-content .stats-shots table td,.stats-more-content .stats-pass table td,.stats-more-content .stats-saves table td,.stats-more-content .stats-fouls table td{
+  text-align:left;
+  align:left;
+  padding:0 1em 0 1em
+}

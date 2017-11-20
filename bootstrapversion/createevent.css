@@ -1,0 +1,32 @@
+ul {
+	margin-top: 2em;
+	margin-bottom: 1em !important;
+	border-radius: 34px; 
+		-moz-border-radius: 34px; 
+		-webkit-border-radius: 34px;
+	border: 2px solid #FFC80A;
+}
+
+li {
+	width: 30vw
+}
+
+.nav li a {
+	color: #9FA3A7
+}
+
+.nav li .active, .nav li .active:focus, .nav li .active:hover {
+	color: #000 !important;
+	background-color:#FFC80A !important;
+  	border-radius:1.2em;
+}
+
+.login {
+	float: right;
+	background-color: #FFC80A;
+	border-radius: 34px; 
+		-moz-border-radius: 34px; 
+		-webkit-border-radius: 34px;
+	border: 2px solid #FFC80A;
+	color: black;
+}

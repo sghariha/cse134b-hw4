@@ -1,0 +1,18 @@
+.imageholder {
+	margin-top: 4em;
+	margin-bottom: 4em
+}
+
+.login {
+	float: right;
+	background-color: #FFC80A;
+	border-radius: 34px; 
+		-moz-border-radius: 34px; 
+		-webkit-border-radius: 34px;
+	border: 2px solid #FFC80A;
+	color: black;
+}
+
+.form-check {
+	margin-top: 4em
+}

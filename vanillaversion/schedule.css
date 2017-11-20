@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,700");
+
+body{
+  width:100% !important;
+  background-color:white;
+  overflow-x:hidden
+}
+
+.nav-head{
+  border:1px solid #FFC80A;
+  border-radius:1.2em;
+  width:75%;
+  margin:30px auto
+}
+
+.nav-head ul{
+  margin:0;
+  padding:0;
+  display:table;
+  width:100%
+}
+
+.nav-head ul li {
+  display:table-cell
+}
+
+.nav-head ul li a{
+  padding:.7em 0 .7em 0;
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  color:#9FA3A7;
+  font-size:.7em;
+  font-family:"Montserrat",sans-serif;
+  font-weight:700
+}
+
+.nav-head ul li .active{
+  background-color:#FFC80A;
+  border-radius:1.2em;
+  color:#000
+}
+
+hr {
+  margin: 20px 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #FFC80A;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.schedule-content {
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 150px;
+}
+
+.filterlabel {
+  display: inline;
+  color: #B5B8BB
+}
+
+.filterheader {
+  display: inline;
+  color:#FFC80A;
+  margin-right: 2em
+}
+
+.filter {
+  margin-top: 3em;
+  margin-bottom: 3em
+}
+
+.event {
+  font-family: $main-font;
+  display: table;
+  width: 100%;
+}
+.left {
+  padding: 0 1em 0 0;
+  text-align: left;
+  display: table-cell;
+  width: 10%;
+}
+.right {
+  display: table-cell;
+}
+
+.schedulerow {
+  margin-right: 1em;
+  display: inline;
+}
+
+.schedulebottomrow {
+  margin-top: 1em
+}
+
+#modschedule {
+  width: 10em;
+  height: 2em;
+  border-radius: 34px; 
+  -moz-border-radius: 34px; 
+  -webkit-border-radius: 34px;
+  border: 2px solid #FFC80A;
+  background-color: #FFC80A;
+  font-size: .7em;
+  text-transform: uppercase;
+}
+
+.management {
+  float: right
+}
