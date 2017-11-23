@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home page</title>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+window.onload = function() {
+  var stats = document.getElementsByClassName("active");
+  history.pushState({ path: this.path }, '', stats[0].href);
+  $("#main_text").load(stats[0].href);
+}
+$(function() {
+  $('.nav-link').click(function() {
+    history.pushState({ path: this.path }, '', this.href);
+    $(".active").removeClass("active");
+    $(this).addClass('active');
+    $("#main_text").load(this.href);
+    return false
+  })
+
+
+});
+</script>
+</head>
+<body>
+  <!-- Remove this comment when done -->
+  <p>
+    still in index.html
+  </p>
+  <div class="container container-index">
+
+  <nav class="navbar">
+    <ul class="nav nav-pills nav-fill">
+      <li class="nav-item">
+        <a  id="nav_a" class="nav-link active" href="statistics-admin.html"><img src="bar-chart.svg" /></a>
+      </li>
+      <li class="nav-item">
+        <a id="nav_b" class="nav-link" href="schedule-admin.html"><img src="calendar.svg" /></a>
+      </li>
+      <li class="nav-item">
+        <a id="nav_c" class="nav-link" href="roster-admin.html"><img src="listing-option.svg" /></a>
+      </li>
+    </ul>
+  </nav>
+  <div id ="main_text">
+
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

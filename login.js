@@ -16,7 +16,7 @@ function login() {
 		if(rememberMe === true && storage === true) {
 			localStorage.setItem("rememberstatus", "remember");
 		}
-		window.location = "scheduleadmin.html"
+		window.location = "index.html"
 		return false;
 	}
 	if(localStorage.getItem("username") && localStorage.getItem("email") && localStorage.getItem("password")) {
@@ -25,7 +25,7 @@ function login() {
 			if(rememberMe === true && storage === true) {
 				localStorage.setItem("rememberstatus", "remember");
 			}
-			window.location = "scheduleadmin.html"
+			window.location = "index.html"
 			return false;
 		}
 	}

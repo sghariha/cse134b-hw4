@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,900');
+
+/*
+font-family: 'Nunito Sans', sans-serif;
+*/
+
 html, body {
 	padding: 0;
 	width: 100%;
@@ -27,6 +33,8 @@ html, body {
 a {
 	color: inherit;
 }
+
+/*
 ul {
 	margin-top: 2em;
 	margin-bottom: 2em !important;
@@ -35,9 +43,12 @@ ul {
 		-webkit-border-radius: 34px;
 	border: 2px solid #FFC80A;
 }
+
 li {
 	width: 30vw
 }
+
+
 .nav li a {
 	color: #9FA3A7
 }
@@ -46,6 +57,7 @@ li {
 	background-color:#FFC80A !important;
   	border-radius:1.2em;
 }
+*/
 hr {
   margin: 20px 0;
   display: block;
@@ -82,4 +94,59 @@ hr {
 }
 select {
 	display: inline;
+}
+
+
+/* Style for index.html */
+.container-index {
+	background-color: white;
+
+}
+.navbar {
+	background-color: white;
+	padding-left:0; 
+	padding-right: 0; 
+	width: 100%;
+}
+ul {
+	margin-top: 2em;
+	margin-bottom: 2em !important;
+	border-radius: 34px; 
+		-moz-border-radius: 34px; 
+		-webkit-border-radius: 34px;
+	border: 2px solid #FFC80A;
+	width: 100%;
+}
+
+li {
+	width: 33%;
+}
+
+li img {
+	width: 25px;
+}
+
+.nav li .active, .nav li .active:focus, .nav li .active:hover {
+	color: #000 !important;
+	background-color:#FFC80A !important;
+  	border-radius:1.2em;
+}
+.container {
+	@media (max-width: 991px) {
+		background-color: yellow;
+	}
+}
+
+@media (min-width: 991px) { 
+	.container {
+		width: 800px;
+	}
+}
+
+
+
+/* Styles for pages */
+h3 {
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 900;
 }
