@@ -10,11 +10,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script>
+
 window.onload = function() {
   var stats = document.getElementsByClassName("active");
   history.pushState({ path: this.path }, '', stats[0].href);
   $("#main_text").load(stats[0].href);
 }
+
 $(function() {
   $('.nav-link').click(function() {
     history.pushState({ path: this.path }, '', this.href);
@@ -23,9 +25,8 @@ $(function() {
     $("#main_text").load(this.href);
     return false
   })
-
-
 });
+
 </script>
 </head>
 <body>
