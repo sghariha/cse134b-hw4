@@ -17,8 +17,8 @@ html, body {
 	margin-top: 2em;
 	padding: 0.5em 2em 0.5em 2em;
 	background-color: #FFC80A;
-	border-radius: 34px; 
-		-moz-border-radius: 34px; 
+	border-radius: 34px;
+		-moz-border-radius: 34px;
 		-webkit-border-radius: 34px;
 	border: 2px solid #FFC80A;
 	color: black
@@ -38,8 +38,8 @@ a {
 ul {
 	margin-top: 2em;
 	margin-bottom: 2em !important;
-	border-radius: 34px; 
-		-moz-border-radius: 34px; 
+	border-radius: 34px;
+		-moz-border-radius: 34px;
 		-webkit-border-radius: 34px;
 	border: 2px solid #FFC80A;
 }
@@ -70,8 +70,8 @@ hr {
 .edit {
 	float: right;
 	background-color: #FFC80A;
-	border-radius: 34px; 
-		-moz-border-radius: 34px; 
+	border-radius: 34px;
+		-moz-border-radius: 34px;
 		-webkit-border-radius: 34px;
 	border: 2px solid #FFC80A;
 	color: black;
@@ -104,15 +104,15 @@ select {
 }
 .navbar {
 	background-color: white;
-	padding-left:0; 
-	padding-right: 0; 
+	padding-left:0;
+	padding-right: 0;
 	width: 100%;
 }
 ul {
 	margin-top: 2em;
 	margin-bottom: 2em !important;
-	border-radius: 34px; 
-		-moz-border-radius: 34px; 
+	border-radius: 34px;
+		-moz-border-radius: 34px;
 		-webkit-border-radius: 34px;
 	border: 2px solid #FFC80A;
 	width: 100%;
@@ -137,7 +137,7 @@ li img {
 	}
 }
 
-@media (min-width: 991px) { 
+@media (min-width: 991px) {
 	.container {
 		width: 800px;
 	}
@@ -147,6 +147,19 @@ li img {
 
 /* Styles for pages */
 h3 {
+	font-family: 'Nunito Sans', sans-serif;
+	font-weight: 900;
+}
+
+.dropdown .btn {
+	border-radius: 2em;
+	background-color: #FFC80A;
+}
+
+
+
+.statistics-game {
+	margin-top: 80px;
 	font-family: 'Nunito Sans', sans-serif;
 	font-weight: 900;
 }
