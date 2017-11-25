@@ -3,7 +3,7 @@
 <head>
   <title>Home page</title>
   <meta charset="utf-8" />
-  
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" />
 
@@ -12,12 +12,12 @@
 <script>
 window.onload = function() {
   var stats = document.getElementsByClassName("active");
-  history.pushState({ path: this.path }, '', stats[0].href);
+  //history.pushState({ path: this.path }, '', stats[0].href);
   $("#main_text").load(stats[0].href);
 }
 $(function() {
   $('.nav-link').click(function() {
-    history.pushState({ path: this.path }, '', this.href);
+    //history.pushState({ path: this.path }, '', this.href);
     $(".active").removeClass("active");
     $(this).addClass('active');
     $("#main_text").load(this.href);

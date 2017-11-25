@@ -16,16 +16,16 @@ function login() {
 		if(rememberMe === true && storage === true) {
 			localStorage.setItem("rememberstatus", "remember");
 		}
-		window.location = "index.html"
+		window.location = "statistics-admin.html"
 		return false;
 	}
 	if(localStorage.getItem("username") && localStorage.getItem("email") && localStorage.getItem("password")) {
-		if((username === localStorage.getItem("username") || username === localStorage.getItem("email")) && 
+		if((username === localStorage.getItem("username") || username === localStorage.getItem("email")) &&
 			password === localStorage.getItem("password")) {
 			if(rememberMe === true && storage === true) {
 				localStorage.setItem("rememberstatus", "remember");
 			}
-			window.location = "index.html"
+			window.location = "statistics-admin.html"
 			return false;
 		}
 	}
