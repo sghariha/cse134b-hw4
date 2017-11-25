@@ -25,15 +25,46 @@
         </li>
       </ul>
     </nav>
-    <div id ="main_text">
+    <div id ="main_text" style="width: 100%;">
 
       <!-- Page Name -->
       <h3>Schedule</h3>
+
+      <div class="row" style="margin-bottom: 10px; margin-top:30px; color:#FFC80A;">
+        <div class="col-2 hidden" style="display:none;">
+          <a href="#" id="stats-done">Done</a>
+        </div>
+        <div class="col-2 visable">
+          <a href="#" id="stats-edit">Edit</a>
+        </div>
+        <div class="col-2 visable">
+          <a href="#" id="stats-filter">Filter</a>
+        </div>
+        <div class="col-2 offset-sm-6 offset-4 visable" style="position: relative;">
+          <a href="#" id="stats-calendar">Calendar</a>
+        </div>
+        <div class="col-12 hidden" style="display:none; margin-top:10px; margin-bottom:20px;">
+          <a href="create-event.html" id="stats-add"><img src="plus.svg" style="height:20px;" /></a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2 hidden" style="display: none;">
+          <img src="remove.svg" style="height:20px;"/>
+        </div>
+        <div class="col-2 mid" style="">
+          <h6>11/8</h6>
+        </div>
+        <div class="col-10 right" style="">
+          <h5>Game: University High School</h5>
+        </div>
+      </div>
 
 
     </div>
   </div>
 
+  <script src="schedule.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
