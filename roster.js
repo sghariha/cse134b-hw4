@@ -22,14 +22,14 @@ function addplayer() {
 }
 
 function displayedit(element) {
-  var num = element.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling;
-  localStorage.setItem("editplayer", num.innerHTML);
+  var num = element.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+  localStorage.setItem("editplayer", num);
   window.location = "edit-player.html";
   return false;
 }
 
 function deleteplayer(element) {
-  var num = element.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+  var num = element.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
   console.log(num);
   localStorage.removeItem("playernumber" + num);
   localStorage.removeItem("firstname" + num);
@@ -73,4 +73,14 @@ function deleteplayer(element) {
   localStorage.setItem("playercount", total.toString());
   location.reload();
   return false;
+}
+
+function displayprofile(element) {
+  var num = element.parentElement.previousElementSibling.innerHTML;
+  if(element.parentElement.parentElement.parentElement.nextElementSibling.style.display === 'none') {
+    element.parentElement.parentElement.parentElement.nextElementSibling.style.display = 'block';
+  }
+  else {
+    element.parentElement.parentElement.parentElement.nextElementSibling.style.display = 'none';
+  }
 }

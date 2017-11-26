@@ -25,29 +25,38 @@
         </li>
       </ul>
     </nav>
-    <div class="text-center imageholder">
-      <h2>Roster</h2>
-    </div>
+    <h3>Roster</h3>
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-4 rosteradd">
         <input type="button" value="Add Player" class="btn btn-primary login" onclick="addplayer()">
       </div>
     </div>
     <template id="playerrow">
       <div class="row">
-        <div class="col-sm-4">
-          <img src="http://psychopy.org/_downloads/face.jpg" id="first-img" class="rounded-circle" height="150px" width="150px">
+        <div class="col-sm-4 text-center">
+          <img src="http://psychopy.org/_downloads/face.jpg" class="rounded-circle">
         </div>
         <div class="col-sm-8">
           <h3 class="playernumber"></h3>
-          <h3><a class="playername" href="viewprofile-admin-boot.html"></a></h3>
-          <p class="playerposition"></p>
-          <p class="playerheight"></p>
-          <p class="playerweight"></p>
-          <input type="button" value="Edit" class="btn btn-primary login" onclick="displayedit(this)">
-          <input type="button" value="Delete" class="btn btn-primary login" onclick="deleteplayer(this)">
+          <h5 class="playernameheader"><a class="playername" href="#" onclick="displayprofile(this)"></a></h5>
+          <div>
+            <h6 class="playerposition"></h6>
+            <h6 class="playerheight"></h6>
+            <h6 class="playerweight"></h6>
+          </div>
+          <div>
+            <input type="button" value="Edit" class="btn btn-primary login editplayer" onclick="displayedit(this)">
+            <input type="button" value="Delete" class="btn btn-primary login deleteplayer" onclick="deleteplayer(this)">
+          </div>
         </div>
       </div>
+      <div class="row playerprofile">
+        <div class="col-sm-12">
+          <p>DOB</p>
+          <p>status</p>
+        </div>
+      </div>
+      <hr>
     </template>
 
   </div>
