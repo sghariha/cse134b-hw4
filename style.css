@@ -34,6 +34,13 @@ a {
 	color: inherit;
 }
 
+.playernumber {
+	display: none;
+}
+
+.playerposition, .playerheight, .playerweight {
+	display: inline-block;
+}
 /*
 ul {
 	margin-top: 2em;
