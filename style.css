@@ -14,8 +14,8 @@ html, body {
 	margin-bottom: 4em
 }
 .login {
-	margin-top: 2em;
-	padding: 0.5em 2em 0.5em 2em;
+	margin-top: 1em;
+	padding: 0.5em 1em 0.5em 1em;
 	background-color: #FFC80A;
 	border-radius: 34px;
 		-moz-border-radius: 34px;
@@ -34,13 +34,6 @@ a {
 	color: inherit;
 }
 
-.playernumber {
-	display: none;
-}
-
-.playerposition, .playerheight, .playerweight {
-	display: inline-block;
-}
 /*
 ul {
 	margin-top: 2em;
@@ -103,7 +96,6 @@ select {
 	display: inline;
 }
 
-
 /* Style for index.html */
 .container-index {
 	background-color: white;
@@ -150,8 +142,6 @@ li img {
 	}
 }
 
-
-
 /* Styles for pages */
 h3 {
 	font-family: 'Nunito Sans', sans-serif;
@@ -163,10 +153,37 @@ h3 {
 	background-color: #FFC80A;
 }
 
-
-
 .statistics-game {
 	margin-top: 80px;
 	font-family: 'Nunito Sans', sans-serif;
 	font-weight: 900;
+}
+
+.playerprofile {
+	display: none;
+	margin-top: 2em
+}
+
+.rosteradd {
+	margin-top: 2em;
+	margin-bottom: 2em
+}
+
+.rounded-circle {
+	max-width: 100px;
+	max-height: 100px;
+}
+
+.playernumber {
+	display: none;
+}
+
+.playerposition, .playerheight, .playerweight, .editplayer, .deleteplayer {
+	display: inline-block;
+	margin-right: 1em
+}
+
+.playernameheader {
+	margin-bottom: 1em;
+	text-decoration: underline;
 }
