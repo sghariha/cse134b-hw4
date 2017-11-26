@@ -41,6 +41,17 @@ function deleteplayer(element) {
   localStorage.removeItem("inches" + num);
   localStorage.removeItem("weight" + num);
 
+  localStorage.removeItem("playerfoul" + num);
+  localStorage.removeItem("playerrc" + num);
+  localStorage.removeItem("playeryc" + num);
+  localStorage.removeItem("playersog" + num);
+  localStorage.removeItem("playerg" + num);
+  localStorage.removeItem("playercka" + num);
+  localStorage.removeItem("playergka" + num);
+  localStorage.removeItem("playerpka" + num);
+  localStorage.removeItem("playerti" + num);
+  localStorage.removeItem("playerapp" + num);
+
   for(var i = 1; i <= parseInt(localStorage.getItem("playercount"), 10); i++) {
     if(i > parseInt(num, 10)) {
       console.log(i);
@@ -55,6 +66,17 @@ function deleteplayer(element) {
       localStorage.setItem("feet" + index.toString(), localStorage.getItem("feet" + i.toString()));
       localStorage.setItem("inches" + index.toString(), localStorage.getItem("inches" + i.toString()));
       localStorage.setItem("weight" + index.toString(), localStorage.getItem("weight" + i.toString()));
+
+      localStorage.setItem("playerfoul" + index.toString(), localStorage.getItem("playerfoul" + i.toString()));
+      localStorage.setItem("playerrc" + index.toString(), localStorage.getItem("playerrc" + i.toString()));
+      localStorage.setItem("playeryc" + index.toString(), localStorage.getItem("playeryc" + i.toString()));
+      localStorage.setItem("playersog" + index.toString(), localStorage.getItem("playersog" + i.toString()));
+      localStorage.setItem("playerg" + index.toString(), localStorage.getItem("playerg" + i.toString()));
+      localStorage.setItem("playercka" + index.toString(), localStorage.getItem("playercka" + i.toString()));
+      localStorage.setItem("playergka" + index.toString(), localStorage.getItem("playergka" + i.toString()));
+      localStorage.setItem("playerpka" + index.toString(), localStorage.getItem("playerpka" + i.toString()));
+      localStorage.setItem("playerti" + index.toString(), localStorage.getItem("playerti" + i.toString()));
+      localStorage.setItem("playerapp" + index.toString(), localStorage.getItem("playerapp" + i.toString()));
       if(i === parseInt(localStorage.getItem("playercount"), 10)) {
         localStorage.removeItem("playernumber" + i);
         localStorage.removeItem("firstname" + i);
@@ -65,6 +87,17 @@ function deleteplayer(element) {
         localStorage.removeItem("feet" + i);
         localStorage.removeItem("inches" + i);
         localStorage.removeItem("weight" + i);
+
+        localStorage.removeItem("playerfoul" + num);
+        localStorage.removeItem("playerrc" + num);
+        localStorage.removeItem("playeryc" + num);
+        localStorage.removeItem("playersog" + num);
+        localStorage.removeItem("playerg" + num);
+        localStorage.removeItem("playercka" + num);
+        localStorage.removeItem("playergka" + num);
+        localStorage.removeItem("playerpka" + num);
+        localStorage.removeItem("playerti" + num);
+        localStorage.removeItem("playerapp" + num);
       }
     }
   }

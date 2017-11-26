@@ -25,7 +25,78 @@ function addplayer() {
 			localStorage.setItem("feet" + newcount.toString(), document.getElementById("feet").value + "'");
 			localStorage.setItem("inches" + newcount.toString(), document.getElementById("inches").value + "\"");
 			localStorage.setItem("weight" + newcount.toString(), document.getElementById("weight").value + " lbs");
+
+			if(!document.getElementById("playerfoul").value) {
+				localStorage.setItem("playerfoul" + newcount.toString(), "0");
 			}
+			else {
+				localStorage.setItem("playerfoul" + newcount.toString(), document.getElementById("playerfoul").value);
+			}
+
+			if(!document.getElementById("playerrc").value) {
+				localStorage.setItem("playerrc" + newcount.toString(), "0");
+			}
+			else {
+				localStorage.setItem("playerrc" + newcount.toString(), document.getElementById("playerrc").value);
+			}
+
+			if(!document.getElementById("playeryc").value) {
+				localStorage.setItem("playeryc" + newcount.toString(), "0");
+			}
+			else {
+				localStorage.setItem("playerrc" + newcount.toString(), document.getElementById("playerrc").value);
+			}
+
+			if(!document.getElementById("playersog").value) {
+				localStorage.setItem("playersog" + newcount.toString(), "0");
+			}
+			else {
+				localStorage.setItem("playersog" + newcount.toString(), document.getElementById("playersog").value);
+			}
+
+			if(!document.getElementById("playerg").value) {
+				localStorage.setItem("playerg" + newcount.toString(), "0");
+			}
+			else {
+				localStorage.setItem("playerg" + newcount.toString(), document.getElementById("playerg").value);
+			}
+
+			if(!document.getElementById("playercka").value) {
+				localStorage.setItem("playercka" + newcount.toString(), "0");
+			}
+			else {
+				localStorage.setItem("playercka" + newcount.toString(), document.getElementById("playercka").value);
+			}
+
+			if(!document.getElementById("playergka").value) {
+				localStorage.setItem("playergka" + newcount.toString(), "0");
+			}
+			else {
+				localStorage.setItem("playergka" + newcount.toString(), document.getElementById("playergka").value);
+			}
+
+			if(!document.getElementById("playerpka").value) {
+				localStorage.setItem("playerpka" + newcount.toString(), "0");
+			}
+			else {
+				localStorage.setItem("playerpka" + newcount.toString(), document.getElementById("playerpka").value);
+			}
+
+			if(!document.getElementById("playerti").value) {
+				localStorage.setItem("playerti" + newcount.toString(), "0");
+			}
+			else {
+				localStorage.setItem("playerti" + newcount.toString(), document.getElementById("playerti").value);
+			}
+
+			if(!document.getElementById("playerapp").value) {
+				localStorage.setItem("playerapp" + newcount.toString(), "0");
+			}
+			else {
+				localStorage.setItem("playerapp" + newcount.toString(), document.getElementById("playerapp").value);
+			}
+
+		}
 		else {
 			document.getElementById("warning").innerHTML = "Please enter all fields!";
 			return false;
