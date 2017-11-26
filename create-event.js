@@ -8,7 +8,7 @@ $(function() {
     }
 
     var elements2 = document.getElementsByClassName('visable');
-    for(var i=0; i < elements.length; i++) {
+    for(var i=0; i < elements2.length; i++) {
       elements2[i].style.display = 'none';
     }
 
@@ -25,7 +25,7 @@ $(function() {
     }
 
     var elements2 = document.getElementsByClassName('visable');
-    for(var i=0; i < elements.length; i++) {
+    for(var i=0; i < elements2.length; i++) {
       elements2[i].style.display = 'inline';
     }
     return false;
@@ -33,19 +33,101 @@ $(function() {
 });
 
 function changeEvent(obj) {
-	var select = obj;
-	var selected = select.options[select.selectedIndex].value;
+  var select = obj;
+  var selected = select.options[select.selectedIndex].value;
 
-	if(selected === "game") {
-		document.getElementById('team-option').style.display = "flex";
-		document.getElementById('other-option').style.display = "none";
-	}
-	else if(selected == "other") {
+  if(selected === "game") {
+    document.getElementById('team-option').style.display = "flex";
+    document.getElementById('other-option').style.display = "none";
+  }
+  else if(selected == "other") {
     document.getElementById('team-option').style.display = "none";
-		document.getElementById('other-option').style.display = "flex";
-	}
+    document.getElementById('other-option').style.display = "flex";
+  }
   else {
     document.getElementById('team-option').style.display = "none";
     document.getElementById('other-option').style.display = "none";
+  }
+}
+
+
+
+function addEvent() {
+  var storage = false;
+  if(typeof(Storage) !== "undefined") {
+    storage = true;
+  }
+
+  if(storage == true){
+
+
+
+    if(document.getElementById("event-type").value == "game" && !document.getElementById("opponent").value) {
+      console.log("1st");
+      document.getElementById("warning").innerHTML = "Please enter all fields!";
+      return false;
+    }
+
+    if(document.getElementById("event-type").value == "other" && !document.getElementById("title").value) {
+      console.log("2nd");
+      document.getElementById("warning").innerHTML = "Please enter all fields!";
+      return false;
+    }
+
+    if((!$('#remove-time:hidden')[0]) && document.getElementById("end-date").value && document.getElementById("end-time").value) {
+      console.log("3rd");
+      document.getElementById("warning").innerHTML = "Please enter all fields!";
+      return false;
+    }
+
+    if(document.getElementById("location").value && document.getElementById("start-date").value && document.getElementById("start-time").value && document.getElementById("notes").value) {
+
+      if(!localStorage.getItem("eventcount")) {
+        localStorage.setItem("eventcount", "0");
+      }
+
+      count = localStorage.getItem("eventcount");
+      newcount = parseInt(count, 10) + 1;
+
+
+      localStorage.setItem("eventcount", newcount.toString());
+
+      localStorage.setItem("event-type" + newcount.toString(), document.getElementById("event-type").value);
+
+      /* If a game */
+      if(document.getElementById("opponent")) {
+        localStorage.setItem("opponent" + newcount.toString(), document.getElementById("opponent").value);
+      }
+      /* if other */
+      else if(document.getElementById("title")) {
+        localStorage.setItem("title" + newcount.toString(), document.getElementById("title").value);
+      }
+
+      localStorage.setItem("location" + newcount.toString(), document.getElementById("location").value);
+
+      localStorage.setItem("start-date" + newcount.toString(), document.getElementById("start-date").value);
+
+      localStorage.setItem("start-time" + newcount.toString(), document.getElementById("start-time").value);
+
+      /* If an end date is given */
+      if(!$('#remove-time:hidden')[0]) {
+        localStorage.setItem("end-date" + newcount.toString(), document.getElementById("end-date").value);
+        localStorage.setItem("end-time" + newcount.toString(), document.getElementById("end-time").value);
+      }
+
+      localStorage.setItem("notes" + newcount.toString(), document.getElementById("notes").value);
+
+    }
+    else {
+      console.log("4th");
+      document.getElementById("warning").innerHTML = "Please enter all fields!";
+      return false;
+    }
+    window.location = "schedule-admin.html";
+    return false;
+
+
+
+
   }
 }
