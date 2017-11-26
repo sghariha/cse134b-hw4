@@ -25,7 +25,6 @@ function addplayer() {
 			localStorage.setItem("feet" + newcount.toString(), document.getElementById("feet").value + "'");
 			localStorage.setItem("inches" + newcount.toString(), document.getElementById("inches").value + "\"");
 			localStorage.setItem("weight" + newcount.toString(), document.getElementById("weight").value + " lbs");
-			localStorage.setItem("display" + newcount.toString(), "false");
 			}
 		else {
 			document.getElementById("warning").innerHTML = "Please enter all fields!";

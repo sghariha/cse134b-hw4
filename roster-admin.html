@@ -28,7 +28,11 @@
     <div class="text-center imageholder">
       <h2>Roster</h2>
     </div>
-
+    <div class="row">
+      <div class="col-sm-4">
+        <input type="button" value="Add Player" class="btn btn-primary login" onclick="addplayer()">
+      </div>
+    </div>
     <template id="playerrow">
       <div class="row">
         <div class="col-sm-4">
@@ -41,6 +45,7 @@
           <p class="playerheight"></p>
           <p class="playerweight"></p>
           <input type="button" value="Edit" class="btn btn-primary login" onclick="displayedit(this)">
+          <input type="button" value="Delete" class="btn btn-primary login" onclick="deleteplayer(this)">
         </div>
       </div>
     </template>
