@@ -8,7 +8,7 @@ if(localStorage.getItem("playercount")) {
 for (var i = 1; i <= count; i++) {
   var tmpl = document.getElementById('playerrow').content.cloneNode(true);
   tmpl.querySelector('.playernumber').innerHTML = localStorage.getItem("playernumber" + i.toString());
-  tmpl.querySelector('.playername').innerHTML = localStorage.getItem("firstname" + i.toString()) + " " + 
+  tmpl.querySelector('.playername').innerHTML = localStorage.getItem("firstname" + i.toString()) + " " +
   localStorage.getItem("lastname" + i.toString());
   tmpl.querySelector('.playerposition').innerHTML = localStorage.getItem("position" + i.toString());
   tmpl.querySelector('.playerheight').innerHTML = localStorage.getItem("feet" + i.toString()) + " " + localStorage.getItem("inches" + i.toString());
@@ -44,7 +44,7 @@ function deleteplayer(element) {
   for(var i = 1; i <= parseInt(localStorage.getItem("playercount"), 10); i++) {
     if(i > parseInt(num, 10)) {
       console.log(i);
-    
+
       var index = i - 1;
       localStorage.setItem("playernumber" + index.toString(), index.toString());
       localStorage.setItem("firstname" + index.toString(), localStorage.getItem("firstname" + i.toString()));

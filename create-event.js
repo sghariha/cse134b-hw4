@@ -46,7 +46,7 @@ function changeEvent(obj) {
   }
   else {
     document.getElementById('team-option').style.display = "none";
-    document.getElementById('other-option').style.display = "none";
+    document.getElementById('other-option').style.display = "flex";
   }
 }
 
@@ -74,6 +74,13 @@ function addEvent() {
       return false;
     }
 
+    if(document.getElementById("event-type").value == "practice" && !document.getElementById("title").value) {
+      console.log("5th");
+      document.getElementById("warning").innerHTML = "Please enter all fields!";
+      return false;
+    }
+
+    /* Checks if there is an end time */
     if((!$('#remove-time:hidden')[0]) && document.getElementById("end-date").value && document.getElementById("end-time").value) {
       console.log("3rd");
       document.getElementById("warning").innerHTML = "Please enter all fields!";
@@ -105,14 +112,17 @@ function addEvent() {
 
       localStorage.setItem("location" + newcount.toString(), document.getElementById("location").value);
 
-      localStorage.setItem("start-date" + newcount.toString(), document.getElementById("start-date").value);
+      var startDate = document.getElementById("start-date").value;
+
+      localStorage.setItem("start-date" + newcount.toString(),startDate);
 
       localStorage.setItem("start-time" + newcount.toString(), document.getElementById("start-time").value);
 
       /* If an end date is given */
       if(!$('#remove-time:hidden')[0]) {
-        localStorage.setItem("end-date" + newcount.toString(), document.getElementById("end-date").value);
-        localStorage.setItem("end-time" + newcount.toString(), document.getElementById("end-time").value);
+        var endDate = document.getElementById("end-date").value;
+        localStorage.setItem("end-date" + newcount.toString(), endDate);
+        localStorage.setItem("end-time" + newcount.toString(), document.getElementById("end_time").value);
       }
 
       localStorage.setItem("notes" + newcount.toString(), document.getElementById("notes").value);
