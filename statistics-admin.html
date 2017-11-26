@@ -11,7 +11,7 @@
 </head>
 <body>
   <!-- Remove this comment when done -->
-  <div class="container container-index">
+  <div class="container container-index" id="stats-container">
     <nav class="navbar">
       <ul class="nav nav-pills nav-fill">
         <li class="nav-item">
@@ -28,9 +28,47 @@
     <div id ="main_text">
       <!-- Page Name -->
       <h3>Statistics</h3>
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th scope="col">Team Statistic</th>
+            <th scope="col">Team Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Wins</td>
+            <td id="teamwins"></td>
+          </tr>
+          <tr>
+            <td>Losses</td>
+            <td id="teamlosses"></td>
+          </tr>
+          <tr>
+            <td>Ties</td>
+            <td id="teamties"></td>
+          </tr>
+          <tr>
+            <td>Goals For</td>
+            <td id="teamgoalsfor"></td>
+          </tr>
+          <tr>
+            <td>Goals Against</td>
+            <td id="teamgoalsagainst"></td>
+          </tr>
+        </tbody>
+      </table>
 
+      <div class="row" style="margin-bottom: 10px; margin-top:30px; color:#FFC80A;">
+        <div class="col-2 hidden" style="display:none;">
+          <a href="#" id="stats-done">Done</a>
+        </div>
+        <div class="col-2 visable">
+          <a href="#" id="stats-edit">Edit</a>
+        </div>
+      </div>
 
-      <!-- Year Drop Down -->
+      <!-- Year Drop Down
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           2017
@@ -39,47 +77,96 @@
           <a class="dropdown-item" href="#">2016</a>
           <a class="dropdown-item" href="#">2015</a>
         </div>
-      </div>
+      </div> -->
 
 
       <!-- Score -->
 
       <!-- Game -->
 
-      <div class="statistics-game" id="statistics-2017">
-
-        <!-- heading -->
-        <div class="row">
-          <div class="col-10">
-            <h3>Score</h3>
-          </div>
-          <div class="col-2" style="position: relative">
-            <h6 style="position: absolute; bottom: 0;">Edit</h6>
-          </div>
+      <template id="eventrow">
+      <div class="row">
+        <div class="col-2 hidden" style="display: none;">
+          <a href="#"value="" onclick="deleteEvent(this)"><img src="remove.svg" style="height:20px;"/></a>
+          <a class="remove-button" style="display:none;"></a>
+          <a class="editbtn" href="#" onclick="editstats(this)">Edit</a>
+          <a class="addbtn" href="#" onclick="addstats(this)">Add</a>
+        </div>
+        <!--
+        Left:
+        - date
+        - Day of the week
+        -->
+        <div class="col-2 mid" style="">
+          <h6 class="event-date" style="font-weight:900; margin-bottom: 5px; margin-top: 2px;"></h6>
+          <h6 class="event-day" style="font-weight: 900;"></h6>
         </div>
 
-        <div class="content">
+        <!--
+        Right:
+        - title
+        - location
+        - time
+
+        -->
+        <div class="col-10 right" style="">
+          <h5 class="playernameheader"><a class="statname" href="#" onclick="displaystat(this)"></a></h5>
+          <span class="location"></span> &nbsp;
+          <span class="time"></span>
+          <h6 class="overallscore"></h6>
+        </div>
+      </div>
+      <div class="row statrow">
+        <div class="col-sm-12">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th scope="col">Game Statistic</th>
+                <th scope="col">Game Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Fouls</td>
+                <td class="sfoul"></td>
+              </tr>
+              <tr>
+                <td>Cards</td>
+                <td class="scards"></td>
+              </tr>
+              <tr>
+                <td>Shots on Goal</td>
+                <td class="ssog"></td>
+              </tr>
+              <tr>
+                <td>Goals</td>
+                <td class="sg"></td>
+              </tr>
+              <tr>
+                <td>Corner Kicks</td>
+                <td class="scka"></td>
+              </tr>
+              <tr>
+                <td>Goal Kicks</td>
+                <td class="sgka"></td>
+              </tr>
+              <tr>
+                <td>Possession Time</td>
+                <td class="spt"></td>
+              </tr>
+            </tbody>
+          </table>
 
         </div>
-
       </div>
+      </template>
 
-
-
-      <div class="statistics-game" id="statistics-2016">
-
-      </div>
-
-      <div class="statistics-game" id="statistics-2015">
-
-      </div>
     </div>
   </div>
 
+  <script src="statistics-admin.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-
 </body>
 </html>
 

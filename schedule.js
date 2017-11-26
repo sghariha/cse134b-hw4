@@ -145,8 +145,9 @@ $(function() {
 function deleteEvent(element) {
   var num = element.nextElementSibling.innerHTML;
   console.log(num);
+  
   localStorage.removeItem("event-type" + num);
-  if(localStorage.getItem("opponent"+num)) {
+  if(localStorage.getItem("opponent" + num)) {
     localStorage.removeItem("opponent" + num);
   }
   else {
@@ -189,10 +190,10 @@ function deleteEvent(element) {
 
       localStorage.setItem("notes" + index.toString(), localStorage.getItem("notes" + i.toString()));
 
-      if(i === parseInt(localStorage.getItem("playercount"), 10)) {
+      if(i === parseInt(localStorage.getItem("eventcount"), 10)) {
 
         localStorage.removeItem("event-type" + i);
-        if(localStorage.getItem("opponent"+i)) {
+        if(localStorage.getItem("opponent" + i)) {
           localStorage.removeItem("opponent" + i);
         }
         else {
@@ -202,7 +203,7 @@ function deleteEvent(element) {
         localStorage.removeItem("start-date" + i);
         localStorage.removeItem("start-time" + i);
 
-        if(localStorage.getItem("end-time"+i)) {
+        if(localStorage.getItem("end-time" + i)) {
           localStorage.removeItem("end-date" + i);
           localStorage.removeItem("end-time" + i);
         }
