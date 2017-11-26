@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {	
-    document.getElementById('existing-team-signup').style.display = "block";
-	document.getElementById('new-team-signup').style.display = "none";
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('existing-team-signup').style.display = "flex";
+
 	document.getElementById('mySelect').value = "player";
 });
 
@@ -9,12 +9,18 @@ function change(obj) {
 	var selected = select.options[select.selectedIndex].value;
 
 	if(selected === "player" || selected === "admin-existing-team") {
-		document.getElementById('existing-team-signup').style.display = "block";
-		document.getElementById('new-team-signup').style.display = "none";
+    var elements2 = document.getElementsByClassName('new-team');
+    for(var i=0; i < elements2.length; i++) {
+      elements2[i].style.display = 'none';
+    }
+		document.getElementById('existing-team-signup').style.display = 'flex';
 	}
 	else {
+    var elements2 = document.getElementsByClassName('new-team');
+    for(var i=0; i < elements2.length; i++) {
+      elements2[i].style.display = 'flex';
+    }
 		document.getElementById('existing-team-signup').style.display = "none";
-		document.getElementById('new-team-signup').style.display = "block";
 	}
 }
 

@@ -7,7 +7,7 @@ $(function() {
       elements[i].style.display = 'inline';
     }
 
-    var elements2 = document.getElementsByClassName('visable');
+    var elements2 = document.getElementsByClassName('visible');
     for(var i=0; i < elements2.length; i++) {
       elements2[i].style.display = 'none';
     }
@@ -24,7 +24,7 @@ $(function() {
       elements[i].style.display = 'none';
     }
 
-    var elements2 = document.getElementsByClassName('visable');
+    var elements2 = document.getElementsByClassName('visible');
     for(var i=0; i < elements2.length; i++) {
       elements2[i].style.display = 'inline';
     }
@@ -102,11 +102,13 @@ function addEvent() {
       localStorage.setItem("event-type" + newcount.toString(), document.getElementById("event-type").value);
 
       /* If a game */
-      if(document.getElementById("opponent")) {
+      if(document.getElementById("event-type").value=="game") {
+        console.log("Goes inside")
         localStorage.setItem("opponent" + newcount.toString(), document.getElementById("opponent").value);
       }
       /* if other */
-      else if(document.getElementById("title")) {
+      else{
+        console.log("Does add title data");
         localStorage.setItem("title" + newcount.toString(), document.getElementById("title").value);
       }
 

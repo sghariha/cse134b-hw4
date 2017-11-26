@@ -42,7 +42,7 @@ if(storage === true) {
       elements[i].style.display = 'none';
     }
 
-    var elements2 = document.getElementsByClassName('visable');
+    var elements2 = document.getElementsByClassName('visible');
     for(var i=0; i < elements2.length; i++) {
       elements2[i].style.display = 'inline';
     }
@@ -65,7 +65,7 @@ $(function() {
       elements[i].style.display = 'inline';
     }
 
-    var elements2 = document.getElementsByClassName('visable');
+    var elements2 = document.getElementsByClassName('visible');
     for(var i=0; i < elements2.length; i++) {
       elements2[i].style.display = 'none';
     }
@@ -82,7 +82,7 @@ $(function() {
       elements[i].style.display = 'none';
     }
 
-    var elements2 = document.getElementsByClassName('visable');
+    var elements2 = document.getElementsByClassName('visible');
     for(var i=0; i < elements2.length; i++) {
       elements2[i].style.display = 'inline';
     }

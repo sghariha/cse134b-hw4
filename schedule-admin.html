@@ -25,44 +25,43 @@
         </li>
       </ul>
     </nav>
-    <div id ="main_text" style="width: 100%;">
+    <div id ="main_text">
 
       <!-- Page Name -->
       <h3>Schedule</h3>
 
-      <div class="row" style="margin-bottom: 10px; margin-top:30px; color:#FFC80A;">
-        <div class="col-2 hidden" style="display:none;">
+      <div class="row schedule-head">
+        <div class="col-2 hidden">
           <a href="#" id="stats-done">Done</a>
         </div>
-        <div class="col-2 visable">
+        <div class="col-2 visible">
           <a href="#" id="stats-edit">Edit</a>
         </div>
-        <div class="col-2 visable">
+        <div class="col-2 visible">
           <a href="#" id="stats-filter">Filter</a>
         </div>
-        <div class="col-2 offset-sm-6 offset-4 visable" style="position: relative;">
-          <a href="#" id="stats-calendar">Calendar</a>
-        </div>
-        <div class="col-12 hidden" style="display:none; margin-top:10px; margin-bottom:20px;">
-          <a href="create-event.html" id="stats-add"><img src="plus.svg" style="height:20px;" /></a>
+
+        <div class="col-12 hidden less-top-1">
+          <a href="create-event.html" id="stats-add"><img src="plus.svg" /></a>
         </div>
       </div>
 
       <template id="eventrow">
-      <div class="row">
-        <div class="col-2 hidden" style="display: none;">
-          <a href="#"value="" onclick="deleteEvent(this)"><img src="remove.svg" style="height:20px;"/></a>
+      <hr class="visible-2" />
+      <div class="row top-row">
+        <div class="col-2 hidden">
+          <a href="#" onclick="deleteEvent(this)"><img src="remove.svg"/></a>
           <a class="remove-button" style="display:none;"></a>
-          <a href="#" onclick="displayedit(this)">Make Changes</a>
+          <a href="#" class="pencil" onclick="displayedit(this)"><img src="pencil.svg" /></a>
         </div>
         <!--
         Left:
         - date
         - Day of the week
         -->
-        <div class="col-2 mid" style="">
-          <h6 class="event-date" style="font-weight:900; margin-bottom: 5px; margin-top: 2px;"></h6>
-          <h6 class="event-day" style="font-weight: 900;"></h6>
+        <div class="col-2 mid">
+          <h6 class="event-date"></h6>
+          <h6 class="event-day"></h6>
         </div>
 
         <!--
@@ -72,10 +71,11 @@
         - time
 
         -->
-        <div class="col-10 right" style="">
-          <h5 class="title" style="font-weight: 900; margin-bottom:0;"></h5>
-          <span class="location"></span> &nbsp;
+        <div class="col-10 right">
+          <h5 class="title"></h5>
+          <span class="location"></span>
           <span class="time"></span>
+
         </div>
       </div>
       </template>

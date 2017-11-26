@@ -2,13 +2,14 @@ var eventList = document.getElementById('schedule-container');
 var count = 0;
 
 var weekday = new Array(7);
-weekday[0] = "Fri";
-weekday[1] = "Sat";
-weekday[2] = "Sun";
-weekday[3] = "Mon";
-weekday[4] = "Tues";
-weekday[5] = "Wed";
-weekday[6] = "Thurs";
+
+weekday[0] = "Sun";
+weekday[1] = "Mon";
+weekday[2] = "Tues";
+weekday[3] = "Wed";
+weekday[4] = "Thurs";
+weekday[5] = "Fri";
+weekday[6] = "Sat";
 
 
 
@@ -44,9 +45,13 @@ for (var i = 1; i <= count; i++) {
       title = "Game: " + localStorage.getItem("opponent"+i.toString());
     }
     if (localStorage.getItem("event-type"+i.toString()) =="practice") {
+      console.log("Does enter practice");
+      console.log(localStorage.getItem("title"+i.toString()));
       title = "Practice: " + localStorage.getItem("title"+i.toString());
     }
     if (localStorage.getItem("event-type"+i.toString()) =="other") {
+      console.log("Does enter other");
+      console.log(localStorage.getItem("title"+i.toString()));
       title = "Other: " + localStorage.getItem("title"+i.toString());
     }
 
@@ -88,10 +93,21 @@ $(function() {
       elements[i].style.display = 'inline-flex';
     }
 
-    var elements2 = document.getElementsByClassName('visable');
+    var elements2 = document.getElementsByClassName('visible');
     for(var i=0; i<elements2.length; i++) {
       elements2[i].style.display = 'none';
     }
+
+    var elements3 = document.getElementsByClassName('visible-2');
+    for(var i=0; i<elements3.length; i++) {
+      elements3[i].style.display = 'none';
+    }
+
+    var elements4 = document.getElementsByClassName('top-row');
+    for(var i=0; i < elements4.length; i++) {
+      elements4[i].style.marginTop = '50px';
+    }
+
     return false;
   })
 });
@@ -106,10 +122,21 @@ $(function() {
       elements[i].style.display = 'none';
     }
 
-    var elements2 = document.getElementsByClassName('visable');
+    var elements2 = document.getElementsByClassName('visible');
     for(var i=0; i<elements2.length; i++) {
       elements2[i].style.display = 'inline-flex';
     }
+
+    var elements3 = document.getElementsByClassName('visible-2');
+    for(var i=0; i<elements3.length; i++) {
+      elements3[i].style.display = 'block';
+    }
+
+    var elements4 = document.getElementsByClassName('top-row');
+    for(var i=0; i < elements4.length; i++) {
+      elements4[i].style.marginTop = '20px';
+    }
+
     return false;
   })
 });
