@@ -44,7 +44,7 @@ function addplayer() {
 				localStorage.setItem("playeryc" + newcount.toString(), "0");
 			}
 			else {
-				localStorage.setItem("playerrc" + newcount.toString(), document.getElementById("playerrc").value);
+				localStorage.setItem("playeryc" + newcount.toString(), document.getElementById("playeryc").value);
 			}
 
 			if(!document.getElementById("playersog").value) {

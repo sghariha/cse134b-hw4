@@ -64,7 +64,7 @@ function editplayer() {
 				localStorage.setItem("playeryc" + num, "0");
 			}
 			else {
-				localStorage.setItem("playerrc" + num, document.getElementById("playerrc").value);
+				localStorage.setItem("playeryc" + num, document.getElementById("playeryc").value);
 			}
 
 			if(!document.getElementById("playersog").value) {

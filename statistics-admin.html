@@ -110,10 +110,53 @@
 
         -->
         <div class="col-10 right" style="">
-          <h5 class="title" style="font-weight: 900; margin-bottom:0;"></h5>
+          <h5 class="playernameheader"><a class="statname" href="#" onclick="displaystat(this)"></a></h5>
           <span class="location"></span> &nbsp;
           <span class="time"></span>
-          <h6 class="overall score"></h6>
+          <h6 class="overallscore"></h6>
+        </div>
+      </div>
+      <div class="row statrow">
+        <div class="col-sm-12">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th scope="col">Game Statistic</th>
+                <th scope="col">Game Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Fouls</td>
+                <td class="sfoul"></td>
+              </tr>
+              <tr>
+                <td>Cards</td>
+                <td class="scards"></td>
+              </tr>
+              <tr>
+                <td>Shots on Goal</td>
+                <td class="ssog"></td>
+              </tr>
+              <tr>
+                <td>Goals</td>
+                <td class="sg"></td>
+              </tr>
+              <tr>
+                <td>Corner Kicks</td>
+                <td class="scka"></td>
+              </tr>
+              <tr>
+                <td>Goal Kicks</td>
+                <td class="sgka"></td>
+              </tr>
+              <tr>
+                <td>Possession Time</td>
+                <td class="spt"></td>
+              </tr>
+            </tbody>
+          </table>
+
         </div>
       </div>
       </template>

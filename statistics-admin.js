@@ -54,7 +54,7 @@ for (var i = 1; i <= count; i++) {
 
     var title = "Game: " + localStorage.getItem("opponent"+i.toString());
 
-    tmpl.querySelector('.title').innerHTML = title;
+    tmpl.querySelector('.statname').innerHTML = title;
     tmpl.querySelector('.location').innerHTML = localStorage.getItem("location"+i.toString());
 
     var time = localStorage.getItem("start-time"+i.toString());
@@ -81,7 +81,27 @@ for (var i = 1; i <= count; i++) {
     }
     else {
       tmpl.querySelector('.addbtn').style.display = 'none'; 
+      if(localStorage.getItem("winorloss" + i.toString()) === "win") {
+        tmpl.querySelector('.overallscore').innerHTML = "W: " + localStorage.getItem("homescore" + i.toString()) + " - " + 
+      localStorage.getItem("awayscore" + i.toString());
+      }
+      else if(localStorage.getItem("winorloss" + i.toString()) === "loss") {
+        tmpl.querySelector('.overallscore').innerHTML = "L: " + localStorage.getItem("homescore" + i.toString()) + " - " + 
+      localStorage.getItem("awayscore" + i.toString());
+      }
+      else {
+        tmpl.querySelector('.overallscore').innerHTML = "T: " + localStorage.getItem("homescore" + i.toString()) + " - " + 
+      localStorage.getItem("awayscore" + i.toString());
+      }
     }
+
+    tmpl.querySelector('.sfoul').innerHTML = localStorage.getItem("fouls" + i.toString());
+    tmpl.querySelector('.scards').innerHTML = localStorage.getItem("cards" + i.toString());
+    tmpl.querySelector('.ssog').innerHTML = localStorage.getItem("shotsongoal" + i.toString());
+    tmpl.querySelector('.sg').innerHTML = localStorage.getItem("goalsmade" + i.toString());
+    tmpl.querySelector('.scka').innerHTML = localStorage.getItem("cornerkicks" + i.toString());
+    tmpl.querySelector('.sgka').innerHTML = localStorage.getItem("goalkicks" + i.toString());
+    tmpl.querySelector('.spt').innerHTML = localStorage.getItem("posstime" + i.toString());
 
     eventList.appendChild(tmpl);
   }
@@ -275,4 +295,13 @@ function deleteEvent(element) {
   localStorage.setItem("eventcount", total.toString());
   location.reload();
   return false;
+}
+
+function displaystat (element) {
+  if(!element.parentElement.parentElement.parentElement.nextElementSibling.style.display) {
+    element.parentElement.parentElement.parentElement.nextElementSibling.style.display = 'block';
+  }
+  else {
+    element.parentElement.parentElement.parentElement.nextElementSibling.style.display = '';
+  }
 }

@@ -13,6 +13,17 @@ for (var i = 1; i <= count; i++) {
   tmpl.querySelector('.playerposition').innerHTML = localStorage.getItem("position" + i.toString());
   tmpl.querySelector('.playerheight').innerHTML = localStorage.getItem("feet" + i.toString()) + " " + localStorage.getItem("inches" + i.toString());
   tmpl.querySelector('.playerweight').innerHTML = localStorage.getItem("weight" + i.toString());
+
+  tmpl.querySelector('.pfoul').innerHTML = localStorage.getItem("playerfoul" + i.toString());
+  tmpl.querySelector('.prc').innerHTML = localStorage.getItem("playerrc" + i.toString());
+  tmpl.querySelector('.pyc').innerHTML = localStorage.getItem("playeryc" + i.toString());
+  tmpl.querySelector('.psog').innerHTML = localStorage.getItem("playersog" + i.toString());
+  tmpl.querySelector('.pg').innerHTML = localStorage.getItem("playerg" + i.toString());
+  tmpl.querySelector('.pcka').innerHTML = localStorage.getItem("playercka" + i.toString());
+  tmpl.querySelector('.pgka').innerHTML = localStorage.getItem("playergka" + i.toString());
+  tmpl.querySelector('.ppka').innerHTML = localStorage.getItem("playerpka" + i.toString());
+  tmpl.querySelector('.pti').innerHTML = localStorage.getItem("playerti" + i.toString());
+  tmpl.querySelector('.papp').innerHTML = localStorage.getItem("playerapp" + i.toString());
   playerList.appendChild(tmpl);
 }
 
@@ -109,11 +120,10 @@ function deleteplayer(element) {
 }
 
 function displayprofile(element) {
-  var num = element.parentElement.previousElementSibling.innerHTML;
-  if(element.parentElement.parentElement.parentElement.nextElementSibling.style.display === 'none') {
+  if(!element.parentElement.parentElement.parentElement.nextElementSibling.style.display) {
     element.parentElement.parentElement.parentElement.nextElementSibling.style.display = 'block';
   }
   else {
-    element.parentElement.parentElement.parentElement.nextElementSibling.style.display = 'none';
+    element.parentElement.parentElement.parentElement.nextElementSibling.style.display = '';
   }
 }
