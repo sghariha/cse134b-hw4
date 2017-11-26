@@ -189,3 +189,13 @@ function deleteEvent(element) {
   location.reload();
   return false;
 }
+
+
+function displayedit(element) {
+  console.log("find me");
+var num = element.previousElementSibling.innerHTML;
+console.log("Num: " + num);
+localStorage.setItem("editevent", num);
+window.location = "edit-event.html";
+return false;
+}
